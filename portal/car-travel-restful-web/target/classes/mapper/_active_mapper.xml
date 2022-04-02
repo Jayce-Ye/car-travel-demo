@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cartravel.mapper._active_mapper">
+
+
+    <select id="_active_searchContext" resultType="com.cartravel.entity._active">
+        SELECT
+        "DAU" ,
+        "WAU" ,
+        "MAU"
+        FROM
+        "active"
+    </select>
+
+
+    <resultMap id="s6" type="com.cartravel.entity._active">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result property="DAU" column="DAU" jdbcType="VARCHAR"/>
+        <result property="WAU" column="WAU" jdbcType="VARCHAR"/>
+        <result property="MAU" column="MAU" jdbcType="VARCHAR"/>
+    </resultMap>
+</mapper>
+

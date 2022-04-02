@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cartravel.mapper._day_week_month_mileage_mapper">
+
+
+    <select id="_day_week_month_mileage_searchContext" resultType="com.cartravel.entity._day_week_month_mileage">
+         SELECT
+        "total_count" ,
+        "daily_count" ,
+        "cur_month_count" ,
+        "total_mileage"
+        FROM
+        "day_week_month_mileage"
+    </select>
+
+
+    <resultMap id="s2" type="com.cartravel.entity._day_week_month_mileage">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result property="cur_month_count" column="cur_month_count" jdbcType="VARCHAR"/>
+        <result property="daily_count" column="daily_count" jdbcType="VARCHAR"/>
+        <result property="total_count" column="total_count" jdbcType="VARCHAR"/>
+        <result property="total_mileage" column="total_mileage" jdbcType="VARCHAR"/>
+    </resultMap>
+</mapper>
+

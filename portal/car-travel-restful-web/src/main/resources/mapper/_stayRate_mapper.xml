@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cartravel.mapper._stayRate_mapper">
+
+
+    <select id="_stayRate_searchContext" resultType="com.cartravel.entity._stayRate">
+        SELECT
+        "dayStayRate" ,
+        "weekStayRate" ,
+        "monthStayRate"
+        FROM
+        "stayRate"
+    </select>
+
+
+    <resultMap id="s2" type="com.cartravel.entity._stayRate">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result property="dayStayRate" column="dayStayRate" jdbcType="VARCHAR"/>
+        <result property="weekStayRate" column="weekStayRate" jdbcType="VARCHAR"/>
+        <result property="monthStayRate" column="monthStayRate" jdbcType="VARCHAR"/>
+    </resultMap>
+</mapper>
+

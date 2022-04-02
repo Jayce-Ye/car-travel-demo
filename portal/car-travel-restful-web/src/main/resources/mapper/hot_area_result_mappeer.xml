@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cartravel.mapper.hot_area_result_mapper">
+
+
+    <select id="hot_area_result_searchContext" resultType="com.cartravel.entity._hot_area_result">
+        SELECT
+        "begin_address_code" ,
+        "centerPoint" ,
+        "count"
+        FROM
+        "hot_area_result"
+    </select>
+
+
+    <resultMap id="s10" type="com.cartravel.entity._hot_area_result">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result property="begin_address_code" column="begin_address_code" jdbcType="VARCHAR"/>
+        <result property="centerPoint" column="centerPoint" jdbcType="VARCHAR"/>
+        <result property="count" column="count" jdbcType="VARCHAR"/>
+    </resultMap>
+</mapper>
+
